@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción - Terra Green</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="cabecera">
+        <div class="etiqueta-newsletter">NEWSLETTER</div>
+    </div>
+
+    <div class="cuerpo-pagina">
+        <div class="tarjeta-formulario">
+            <h1 class="titulo-formulario" id="dynamicTitle">HOLA</h1>
+            <form id="mainForm">
+                <div class="form-fields-wrapper clearfix">
+                    
+                    <div class="field-group">
+                        <label for="nombreCompleto">Nombre Completo</label>
+                        <input type="text" id="nombreCompleto" name="nombreCompleto">
+                        <div class="error-message" id="error-nombreCompleto"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error-message" id="error-email"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena">
+                        <div class="error-message" id="error-contrasena"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="repetirContrasena">Repetir Contraseña</label>
+                        <input type="password" id="repetirContrasena" name="repetirContrasena">
+                        <div class="error-message" id="error-repetirContrasena"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad">
+                        <div class="error-message" id="error-edad"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono">
+                        <div class="error-message" id="error-telefono"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion">
+                        <div class="error-message" id="error-direccion"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad">
+                        <div class="error-message" id="error-ciudad"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="codigoPostal">Código Postal</label>
+                        <input type="text" id="codigoPostal" name="codigoPostal">
+                        <div class="error-message" id="error-codigoPostal"></div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" id="dni" name="dni">
+                        <div class="error-message" id="error-dni"></div>
+                    </div>
+
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="submit-btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="pie-pagina">
+        <table class="tabla-pie">
+            <tr>
+                <td class="pie-izq">
+                    <h3 class="titulo-pie">SIGAN CONECTADOS!</h3>
+                    <p>Ayudanos a difundir la palabra! <strong>Seguinos en nuestras redes sociales</strong> y compartí nuestro contenido con tu red.</p>
+                    <div class="redes-sociales">
+                        <i class="fi fi-brands-facebook"></i>
+                        <i class="fi fi-brands-instagram"></i>
+                        <i class="fi fi-brands-tik-tok"></i>
+                        <span class="usuario-redes">@terra_green</span>
+                    </div>
+                </td>
+                <td class="pie-der">
+                    <h3 class="logo-pie">TERRA GREEN</h3>
+                    <img src="./img/arbol.png" alt="Logo Terra Green" class="logo-pie-imagen">
+                    <ul class="lista-contacto">
+                        <li>Olazabal 926, San Isidro, Buenos Aires</li>
+                        <li>Codigo Postal: 1609</li>
+                        <li>+54 9 11 1637-3471</li>
+                        <li>info@terragreen.com</li>
+                        <li><a href="http://www.terragreen.com" target="_blank">www.terragreen.com</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="modal-title" id="modalTitle"></h2>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
