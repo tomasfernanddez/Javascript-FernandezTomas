@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Distancia</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="panel-izquierdo">
+            <p>Elija la dimensionalidad necesaria:</p>
+            <div class="control-dimension">
+                <label for="dimension">Dimensionalidad:</label>
+                <select id="dimension">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <p>Introduzca las coordenadas de puntos.</p>
+            
+            <div class="coordenadas">
+                <label>A: (</label>
+                <input type="number" id="ax" step="any"> ,
+                <input type="number" id="ay" step="any">
+                <span id="az-container" class="oculto">
+                    , <input type="number" id="az" step="any">
+                </span>
+                <label>)</label>
+            </div>
+            
+            <div class="coordenadas">
+                <label>B: (</label>
+                <input type="number" id="bx" step="any"> ,
+                <input type="number" id="by" step="any">
+                <span id="bz-container" class="oculto">
+                    , <input type="number" id="bz" step="any">
+                </span>
+                <label>)</label>
+            </div>
+        </div>
+
+        <div class="panel-derecho">
+            <div class="diagrama">
+                <img src="./distancia.png" alt="Distancia">
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="boton-contenedor">
+            <button id="calcularBtn">Calcular longitud del segmento AB</button>
+        </div>
+
+        <div id="mensaje-error" class="error oculto"></div>
+
+        <div id="resultado-contenedor" class="oculto">
+            <div class="resultado-header">Resultado:</div>
+            <div class="resultado-body" id="resultado-valor"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
