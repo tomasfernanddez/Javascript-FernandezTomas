@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Paneles Solares</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h2>Calculadora de Paneles Solares</h2>
+        <p class="descripcion">Determina la superficie de paneles que mejor se adapta a tu hogar o la potencia del campo solar.</p>
+
+        <div class="grupo-formulario">
+            <label for="tipo-calculo">¿Qué deseas calcular?</label>
+            <select id="tipo-calculo">
+                <option value="campo">Potencia del campo solar</option>
+                <option value="superficie">Superficie de tejado necesaria</option>
+            </select>
+        </div>
+
+        <div class="contenedor-inputs">
+            <div class="columna-mitad">
+                <div class="grupo-formulario">
+                    <label for="consumo">Consumo anual (kWh):</label>
+                    <input type="number" id="consumo" min="0.1" step="any">
+                </div>
+            </div>
+            
+            <div class="columna-mitad">
+                <div class="grupo-formulario">
+                    <label for="compensacion">Compensación (%):</label>
+                    <input type="number" id="compensacion" min="0.1" max="100" step="any">
+                </div>
+            </div>
+
+            <div class="columna-mitad">
+                <div class="grupo-formulario">
+                    <label for="factor">Factor medioambiental (%):</label>
+                    <input type="number" id="factor" min="0.1" max="100" step="any">
+                </div>
+            </div>
+
+            <div class="columna-mitad">
+                <div class="grupo-formulario">
+                    <label for="horas">Horas solares por día:</label>
+                    <input type="number" id="horas" min="0.1" max="24" step="any">
+                </div>
+            </div>
+
+            <div id="campos-superficie" class="oculto">
+                <div class="columna-mitad">
+                    <div class="grupo-formulario">
+                        <label for="potencia">Potencia por panel (kW):</label>
+                        <input type="number" id="potencia" min="0.01" step="any">
+                    </div>
+                </div>
+                <div class="columna-mitad">
+                    <div class="grupo-formulario">
+                        <label for="area-panel">Superficie por panel (m²):</label>
+                        <input type="number" id="area-panel" min="0.1" step="any">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+        </div>
+
+        <div class="acciones">
+            <button id="btn-calcular" class="btn-primario">Calcular</button>
+            <button id="btn-limpiar" class="btn-secundario">Limpiar campos</button>
+        </div>
+        
+        <div id="mensaje-error" class="alerta error oculto"></div>
+        <div id="mensaje-resultado" class="alerta exito oculto">
+            <h3>Resultado:</h3>
+            <p id="valor-resultado"></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
